@@ -14,5 +14,30 @@ class TopicData {
 
         return $query;
     }
+
+    public function add($data)
+    {
+        $query = $this->connection->prepare(
+            "INSERT INTO topics (
+                title,
+                description
+            ) VALUES (
+                :title,
+                :description
+            )"
+        );
+
+        $data = [
+            ':title' => $data['title'],
+            ':description' => $data['description']
+        ];
+
+        $query->execute($data);
+    }
+
+    public function __construct()
+{
+    $this->connect();
+}
 }
 ?>
