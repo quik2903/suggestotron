@@ -1,6 +1,5 @@
 <?php
-require '../src/Suggestotron/TopicData.php';
-require '../src/Suggestotron/Template.php';
+require '../src/Suggestotron/Autoloader.php';
 
 $data = new \Suggestotron\TopicData();
 
@@ -8,4 +7,5 @@ $topics = $data->getAllTopics();
 
 $template = new \Suggestotron\Template("../views/base.phtml");
 $template->render("../views/index/index.phtml", ['topics' => $topics]);
+
 ?>
