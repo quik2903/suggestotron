@@ -1,10 +1,12 @@
 <?php
+namespace Suggestotron;
+
 class TopicData {
     protected $connection;
 
     public function connect()
     {
-        $this->connection = new PDO("mysql:host=localhost;dbname=suggestotron", "root", "");
+        $this->connection = new \PDO("mysql:host=localhost;dbname=suggestotron", "root", "");
     }
 
     public function getAllTopics()
@@ -43,7 +45,7 @@ class TopicData {
         $values = [':id' => $id];
         $query->execute($values);
 
-        return $query->fetch(PDO::FETCH_ASSOC);
+        return $query->fetch(\PDO::FETCH_ASSOC);
     }
 
     public function update($data)

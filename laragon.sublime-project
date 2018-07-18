@@ -3,6 +3,12 @@
 	[
 		{
 			"path": "public"
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "views"
 		}
 	]
 }
