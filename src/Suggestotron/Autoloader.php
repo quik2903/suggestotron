@@ -1,7 +1,5 @@
 <?php
 namespace Suggestotron;
-require '../src/Suggestotron/Config.php';
-\Suggestotron\Config::setDirectory('../config');
 
 class Autoloader {
     public function load($className)
