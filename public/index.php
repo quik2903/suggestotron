@@ -1,12 +1,9 @@
 <?php
+require '../src/Suggestotron/Config.php';
+\Suggestotron\Config::setDirectory('../config');
 
-/**  
- * Faltaba incluir Config.php, o include poderia ir en Autoloader.php 
- * posiblemente teria mais sentido ali que aqui
- **/
-require '../src/Suggestotron/Config.php'; 
-
-require '../src/Suggestotron/Autoloader.php';
+$config = \Suggestotron\Config::get('autoload');
+require_once $config['class_path'] . '/Suggestotron/Autoloader.php';
 
 $data = new \Suggestotron\TopicData();
 
