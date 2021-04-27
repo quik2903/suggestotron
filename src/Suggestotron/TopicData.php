@@ -4,6 +4,7 @@ namespace Suggestotron;
 class TopicData {
     protected $connection;
 
+	// Esta funcion sirve para conectar
     public function connect()
     {
         $config = \Suggestotron\Config::get('database');
